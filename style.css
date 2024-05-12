@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block: 40px;
+}
+
+header {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+
+header h1 {
+  color: #3f3f3f;
+}
+
+.search-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.search-container input {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  background: #eee;
+  color: #3f3f3f;
+  outline: none;
+}
+
+.search-container .material-symbols-outlined {
+  position: absolute;
+  right: 20px;
+  bottom: 8px;
+  color: #777;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.container {
+  margin-block: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container img {
+  width: 300px;
+  height: 280px;
+}
+
+.container .imageDiv {
+  position: relative;
+}
+
+.container .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  transition: height 0.5s ease-in-out;
+}
+
+.imageDiv:hover .overlay {
+  height: 100%;
+}
+
+.imageDiv .overlay h4 {
+  display: none;
+  text-align: center;
+}
+
+.imageDiv:hover .overlay h4 {
+  display: block;
+  background-color: transparent;
+}
+
+main section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 50px 0;
+}
+
+.loadMoreBtn {
+  border: none;
+  background-color: #777;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 920px) {
+  header {
+    width: 80%;
+  }
+}
